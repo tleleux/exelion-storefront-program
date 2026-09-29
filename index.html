@@ -5,20 +5,18 @@
 :root{--navy:#1B365D;--navy2:#13294a;--ink:#0a1428;--gold:#D4AF37;--goldbr:#e6c25a;--goldsoft:#b8923a;--cream:#f6efe8;--cream2:#efe2d6;--tx:#eef1f6;--mut:#a3adbe;--dim:#727c8e;--panel:#16294a;--panel2:#0f2039;--line:rgba(212,175,55,.22)}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--tx);-webkit-font-smoothing:antialiased}
-.slide{width:13.333in;height:7.5in;position:relative;overflow:hidden;page-break-after:always;padding:1.05in .8in .75in .8in}
+.slide{width:13.333in;height:7.5in;position:relative;overflow:hidden;page-break-after:always;padding:1.45in .8in .75in .8in}
 .slide:last-child{page-break-after:auto}
 .dark{background:linear-gradient(135deg,#26406c 0%,#15294a 40%,#0d1d38 72%,#081120 100%)}
 .navy{background:linear-gradient(135deg,#2f4d82 0%,#1B365D 40%,#122a4c 70%,#0b1a33 100%)}
 .lt{background:linear-gradient(135deg,#fbf6f0 0%,var(--cream) 45%,var(--cream2) 100%);color:var(--navy)}
 .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.55) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.55) 1px,transparent 1px);background-size:60px 60px;opacity:.05}
 .lt .grid-bg{background-image:linear-gradient(rgba(27,54,93,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(27,54,93,.5) 1px,transparent 1px);opacity:.035}
-.bar{position:absolute;top:.38in;left:.8in;right:.8in;display:flex;justify-content:space-between;align-items:center}
-.bar img{height:.5in}
-.chip{display:inline-flex;align-items:center;background:linear-gradient(135deg,#1f3a63,#0e2140);border-radius:12px;padding:6px 16px;border:1px solid rgba(212,175,55,.35)}
-.chip img{height:.42in}
+.bar{position:absolute;top:.3in;left:.8in;right:.8in;display:flex;justify-content:space-between;align-items:center}
+.bar img{height:.95in}
 .badge{font-weight:700;font-size:8.5pt;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;border-radius:30px;color:var(--goldbr);border:1.5px solid rgba(212,175,55,.45)}
 .lt .badge{color:var(--navy);border-color:rgba(27,54,93,.35)}
-.foot{position:absolute;left:.8in;right:.8in;bottom:.3in;display:flex;justify-content:space-between;font-size:8pt;letter-spacing:.06em;color:var(--dim);font-weight:500}
+.foot{position:absolute;left:.8in;right:.8in;bottom:.26in;display:flex;justify-content:space-between;font-size:8pt;letter-spacing:.06em;color:var(--dim);font-weight:500}
 .lt .foot{color:#a98e74}.foot .conf{text-transform:uppercase;letter-spacing:.18em;font-weight:600}
 .eyebrow{font-weight:700;font-size:9.5pt;letter-spacing:.26em;text-transform:uppercase;color:var(--goldbr);margin-bottom:10px}
 .eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:10px;vertical-align:middle}
@@ -30,11 +28,11 @@ h2{font-size:28pt;color:#fff;margin-bottom:12px}
 em{font-style:normal;color:var(--goldbr)}.lt em{color:var(--goldsoft)}
 .lead{font-size:12.5pt;line-height:1.5;color:var(--mut);font-weight:500;max-width:9.2in}
 .lt .lead{color:#4a5a78}
-.disc{position:absolute;left:.8in;right:.8in;bottom:.6in;font-size:7.6pt;color:var(--dim);line-height:1.4;font-weight:500}
+.disc{position:absolute;left:.8in;right:.8in;bottom:.72in;font-size:7.6pt;color:var(--dim);line-height:1.4;font-weight:500}
 .lt .disc{color:#8f7b66}
-.grid{display:grid;gap:14px;margin-top:18px}
+.grid{display:grid;gap:14px;margin-top:14px}
 .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}.g4{grid-template-columns:1fr 1fr 1fr 1fr}
-.card{background:linear-gradient(165deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden}
+.card{background:linear-gradient(165deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
 .card::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.6}
 .card h4{font-size:12.5pt;color:#fff;margin-bottom:6px}
 .card p{font-size:10pt;line-height:1.45;color:var(--mut);font-weight:500}
@@ -45,7 +43,7 @@ em{font-style:normal;color:var(--goldbr)}.lt em{color:var(--goldsoft)}
 .card.feat{border:2px solid var(--gold)}
 .num{width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--goldbr);font-weight:800;font-size:13pt;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
 .dark .num,.navy .num{background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.45)}
-.stats{display:flex;gap:28px;margin-top:22px;align-items:flex-end}
+.stats{display:flex;gap:28px;margin-top:18px;align-items:flex-end}
 .stat b{display:block;white-space:nowrap;font-size:30pt;font-weight:800;color:var(--goldbr);letter-spacing:-.02em;line-height:1}
 .stat span{display:block;font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:6px;font-weight:600}
 .split{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:start;margin-top:12px}
@@ -53,15 +51,15 @@ ul.tick{list-style:none;margin-top:12px}
 ul.tick li{position:relative;padding-left:24px;font-size:11pt;line-height:1.45;color:var(--tx);margin-bottom:8px;font-weight:500}
 ul.tick li::before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
 .lt ul.tick li{color:#233555}
-.quote{background:linear-gradient(168deg,#fbf6ef,#efe1d4);color:var(--navy);border-radius:16px;padding:20px 24px;border:1px solid rgba(27,54,93,.1);margin-top:16px}
+.quote{background:linear-gradient(168deg,#fbf6ef,#efe1d4);color:var(--navy);border-radius:16px;padding:16px 22px;border:1px solid rgba(27,54,93,.1);margin-top:12px}
 .quote b{display:block;font-size:9pt;letter-spacing:.2em;text-transform:uppercase;color:var(--goldsoft);margin-bottom:8px}
 .quote p{font-size:11pt;line-height:1.5;font-weight:500;color:#233555}
-.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
 .tl .step{border-top:3px solid var(--gold);padding-top:12px}
 .tl .step small{display:block;font-size:8.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--goldsoft);font-weight:700;margin-bottom:6px}
 .tl .step h4{font-size:13pt;color:var(--navy);margin-bottom:6px}
 .tl .step p{font-size:10pt;line-height:1.45;color:#4a5a78;font-weight:500}
-.qa{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin-top:16px}
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin-top:10px}
 .qa div{border-left:3px solid var(--gold);padding-left:14px}
 .qa b{display:block;font-size:11pt;color:#fff;margin-bottom:4px;font-weight:700}
 .qa p{font-size:9.8pt;line-height:1.45;color:var(--mut);font-weight:500}
@@ -79,8 +77,9 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
 @media screen{
  html{background:#070d18}
  body{max-width:1400px;margin:0 auto}
- .slide{width:100%;height:auto;min-height:0;padding:100px 6vw 70px}
+ .slide{width:100%;height:auto;min-height:0;padding:150px 6vw 70px}
  .bar{left:6vw;right:6vw;top:30px}
+ .bar img{height:96px}
  .foot{position:static;margin-top:34px}
  .disc{position:static;margin-top:22px}
  .dl{position:fixed;right:18px;bottom:18px;z-index:99;background:var(--gold);color:#0a1428;font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:12px 18px;border-radius:30px;text-decoration:none;box-shadow:0 6px 24px rgba(0,0,0,.35)}
@@ -89,16 +88,16 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
  .g2,.g3,.g4,.split,.qa,.tl{grid-template-columns:1fr}
  .stats{flex-wrap:wrap;gap:18px 28px}
  h1{font-size:26pt}h2{font-size:21pt}.price b{font-size:38pt}
- .bar img{height:.36in}.chip img{height:.32in}.badge{display:none}
- .card[style*="margin-top:38px"]{margin-top:0!important}
- .slide{padding:90px 6vw 50px}
+ .bar img{height:64px}.badge{display:none}
+ .card[style*="margin-top:30px"]{margin-top:0!important}
+ .slide{padding:120px 6vw 50px}
 }
 </style></head><body>
 
 <!-- 1 COVER -->
 <section class="slide dark"><div class="grid-bg"></div>
 <div class="bar"><img src="logo_gold.png" alt="Exelion Group"><span class="badge">Private Briefing</span></div>
-<div style="margin-top:.5in">
+<div style="margin-top:.1in">
 <div class="eyebrow">E-Commerce Storefront Program</div>
 <h1>Own an Amazon storefront.<br><em>Operated for you</em> by a team that runs 500+.</h1>
 <p class="lead" style="margin-top:18px">Exelion Group connects investors with the right e-commerce channel and the right operator. For Amazon and Walmart storefronts, our preferred vendor is <b style="color:#fff">Stable Storefronts</b> — a New Jersey operator with its own warehouse, its own inventory, and 534 partner-owned stores.</p>
@@ -113,7 +112,7 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
 
 <!-- 2 HOW IT WORKS -->
 <section class="slide lt"><div class="grid-bg"></div>
-<div class="bar"><span class="chip"><img src="logo_gold.png" alt="Exelion Group"></span><span class="badge">How It Works</span></div>
+<div class="bar"><img src="logo_gold_light.png" alt="Exelion Group"><span class="badge">How It Works</span></div>
 <div class="eyebrow">Exelion + Stable Storefronts</div>
 <h2>We find the channel. <em>Stable runs the store.</em></h2>
 <p class="lead">E-commerce channels vary wildly — Amazon, Walmart, TikTok Shop, Shopify, eBay — and each one takes a different expertise. Exelion's job is to match investors who want into e-commerce with the channel that fits and the operator who has already proven it at scale.</p>
@@ -143,7 +142,7 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
 
 <!-- 4 THE PACKAGE -->
 <section class="slide lt"><div class="grid-bg"></div>
-<div class="bar"><span class="chip"><img src="logo_gold.png" alt="Exelion Group"></span><span class="badge">The Offer</span></div>
+<div class="bar"><img src="logo_gold_light.png" alt="Exelion Group"><span class="badge">The Offer</span></div>
 <div class="split">
 <div>
 <div class="eyebrow">The two-store package</div>
@@ -158,7 +157,7 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
 </ul>
 </div>
 <div>
-<div class="card" style="margin-top:38px"><h4 style="font-size:14pt">Why two stores instead of one</h4>
+<div class="card" style="margin-top:30px"><h4 style="font-size:14pt">Why two stores instead of one</h4>
 <p style="margin-top:8px"><b>Amazon</b> is the largest marketplace in the world, and it comes with Amazon's rules. Account reviews and policy actions happen to good sellers. On its own, a single Amazon store is a single point of failure.</p>
 <p style="margin-top:10px"><b>Rarely</b> is the platform Stable owns and controls. It runs on Stable's inventory, so it isn't exposed to a third party's policy decisions. Pairing the two gives you diversification inside one package.</p>
 <p style="margin-top:10px;color:var(--navy);font-weight:700">This is the package Stable recommends and the one we present.</p><p style="margin-top:8px">Stable also operates <b>Walmart</b> storefronts — ask on your call.</p></div>
@@ -184,7 +183,7 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
 
 <!-- 6 WHAT TO EXPECT -->
 <section class="slide lt"><div class="grid-bg"></div>
-<div class="bar"><span class="chip"><img src="logo_gold.png" alt="Exelion Group"></span><span class="badge">Expectations</span></div>
+<div class="bar"><img src="logo_gold_light.png" alt="Exelion Group"><span class="badge">Expectations</span></div>
 <div class="eyebrow">What to expect — honestly</div>
 <h2>A real business, <em>on a real timeline.</em></h2>
 <p class="lead">Nobody here promises you a number. What we can tell you is how a store typically develops, based on how Stable's partner stores have behaved. Give it a quarter to build. Judge it over a year.</p>
@@ -215,7 +214,7 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
 </ul>
 </div>
 <div>
-<div class="card" style="margin-top:38px"><h4 style="font-size:14pt">Probably not a fit if…</h4>
+<div class="card" style="margin-top:30px"><h4 style="font-size:14pt">Probably not a fit if…</h4>
 <ul class="tick" style="margin-top:8px">
 <li>You need the capital back inside 90 days.</li>
 <li>You want to run the day-to-day yourself.</li>
@@ -228,7 +227,7 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
 
 <!-- 8 THE PROCESS -->
 <section class="slide lt"><div class="grid-bg"></div>
-<div class="bar"><span class="chip"><img src="logo_gold.png" alt="Exelion Group"></span><span class="badge">The Process</span></div>
+<div class="bar"><img src="logo_gold_light.png" alt="Exelion Group"><span class="badge">The Process</span></div>
 <div class="eyebrow">What happens next</div>
 <h2>Two conversations. <em>No pressure on either.</em></h2>
 <p class="lead">You're going to talk to the operator and to a partner who already owns stores — not to a salesperson. Take the time you need between the two.</p>
@@ -262,13 +261,13 @@ table.cmp td:first-child{font-weight:700;color:var(--navy)}
 <!-- 10 CTA -->
 <section class="slide navy"><div class="grid-bg"></div>
 <div class="bar"><img src="logo_gold.png" alt="Exelion Group"><span class="badge">Next Step</span></div>
-<div style="margin-top:.4in">
+<div style="margin-top:.05in">
 <div class="eyebrow">Let's see if it fits</div>
 <h1 style="font-size:36pt">Thirty minutes with the operator.<br><em>Then you decide.</em></h1>
 <p class="lead" style="margin-top:18px">Your strategy call is directly with Stable's CEO. You'll hear how the stores work, what they cost, what to realistically expect, and what could go wrong. If it fits, you'll meet a current partner next. If it doesn't, we'll tell you.</p>
 <div class="cta">Confirm your strategy call</div>
 <p style="margin-top:14px;font-size:9.5pt;color:var(--mut);font-weight:600;letter-spacing:.04em">30 minutes · Zoom · your Exelion contact will send the calendar confirmation</p>
-<div style="margin-top:.45in;font-size:9pt;letter-spacing:.2em;text-transform:uppercase;color:var(--goldsoft);font-weight:700">Exelion Group LLC · Preferred vendor: Stable Storefronts</div>
+<div style="margin-top:.3in;font-size:9pt;letter-spacing:.2em;text-transform:uppercase;color:var(--goldsoft);font-weight:700">Exelion Group LLC · Preferred vendor: Stable Storefronts</div>
 </div>
 <div class="disc">Informational only. Not an offer to sell or a solicitation of an offer to buy securities. E-commerce carries risk, including loss of capital. All figures are targets based on operator experience, reviewed individually on your call, and are not guarantees.</div>
 <div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential — Prepared for prospective partners</span></div>
