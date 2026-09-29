@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Exelion Group — E-Commerce Storefront Program</title>
+<style>
+@page{size:13.333in 7.5in;margin:0}
+:root{--navy:#1B365D;--navy2:#13294a;--ink:#0a1428;--gold:#D4AF37;--goldbr:#e6c25a;--goldsoft:#b8923a;--cream:#f6efe8;--cream2:#efe2d6;--tx:#eef1f6;--mut:#a3adbe;--dim:#727c8e;--panel:#16294a;--panel2:#0f2039;--line:rgba(212,175,55,.22)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--tx);-webkit-font-smoothing:antialiased}
+.slide{width:13.333in;height:7.5in;position:relative;overflow:hidden;page-break-after:always;padding:1.05in .8in .75in .8in}
+.slide:last-child{page-break-after:auto}
+.dark{background:linear-gradient(135deg,#26406c 0%,#15294a 40%,#0d1d38 72%,#081120 100%)}
+.navy{background:linear-gradient(135deg,#2f4d82 0%,#1B365D 40%,#122a4c 70%,#0b1a33 100%)}
+.lt{background:linear-gradient(135deg,#fbf6f0 0%,var(--cream) 45%,var(--cream2) 100%);color:var(--navy)}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.55) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.55) 1px,transparent 1px);background-size:60px 60px;opacity:.05}
+.lt .grid-bg{background-image:linear-gradient(rgba(27,54,93,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(27,54,93,.5) 1px,transparent 1px);opacity:.035}
+.bar{position:absolute;top:.38in;left:.8in;right:.8in;display:flex;justify-content:space-between;align-items:center}
+.bar img{height:.44in}
+.badge{font-weight:700;font-size:8.5pt;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;border-radius:30px;color:var(--goldbr);border:1.5px solid rgba(212,175,55,.45)}
+.lt .badge{color:var(--navy);border-color:rgba(27,54,93,.35)}
+.foot{position:absolute;left:.8in;right:.8in;bottom:.3in;display:flex;justify-content:space-between;font-size:8pt;letter-spacing:.06em;color:var(--dim);font-weight:500}
+.lt .foot{color:#a98e74}.foot .conf{text-transform:uppercase;letter-spacing:.18em;font-weight:600}
+.eyebrow{font-weight:700;font-size:9.5pt;letter-spacing:.26em;text-transform:uppercase;color:var(--goldbr);margin-bottom:10px}
+.eyebrow::before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:10px;vertical-align:middle}
+.lt .eyebrow{color:var(--goldsoft)}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;line-height:1.07}
+h1{font-size:40pt;color:#fff}
+h2{font-size:28pt;color:#fff;margin-bottom:12px}
+.lt h2{color:var(--navy)}
+em{font-style:normal;color:var(--goldbr)}.lt em{color:var(--goldsoft)}
+.lead{font-size:12.5pt;line-height:1.5;color:var(--mut);font-weight:500;max-width:9.2in}
+.lt .lead{color:#4a5a78}
+.disc{position:absolute;left:.8in;right:.8in;bottom:.6in;font-size:7.6pt;color:var(--dim);line-height:1.4;font-weight:500}
+.lt .disc{color:#8f7b66}
+.grid{display:grid;gap:14px;margin-top:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}.g4{grid-template-columns:1fr 1fr 1fr 1fr}
+.card{background:linear-gradient(165deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.6}
+.card h4{font-size:12.5pt;color:#fff;margin-bottom:6px}
+.card p{font-size:10pt;line-height:1.45;color:var(--mut);font-weight:500}
+.card .bn{font-weight:800;font-size:26pt;color:var(--goldbr);letter-spacing:-.02em;line-height:1;margin-bottom:6px}
+.card .tag{position:absolute;top:13px;right:15px;font-weight:800;font-size:8.5pt;color:var(--goldsoft);letter-spacing:.05em}
+.lt .card{background:linear-gradient(168deg,#ffffff,#f4ebe0);border:1px solid rgba(27,54,93,.12)}
+.lt .card h4{color:var(--navy)}.lt .card p{color:#4a5a78}.lt .card .bn{color:var(--navy)}
+.card.feat{border:2px solid var(--gold)}
+.num{width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--goldbr);font-weight:800;font-size:13pt;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.dark .num,.navy .num{background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.45)}
+.stats{display:flex;gap:28px;margin-top:22px;align-items:flex-end}
+.stat b{display:block;white-space:nowrap;font-size:30pt;font-weight:800;color:var(--goldbr);letter-spacing:-.02em;line-height:1}
+.stat span{display:block;font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-top:6px;font-weight:600}
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:start;margin-top:12px}
+ul.tick{list-style:none;margin-top:12px}
+ul.tick li{position:relative;padding-left:24px;font-size:11pt;line-height:1.45;color:var(--tx);margin-bottom:8px;font-weight:500}
+ul.tick li::before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.lt ul.tick li{color:#233555}
+.quote{background:linear-gradient(168deg,#fbf6ef,#efe1d4);color:var(--navy);border-radius:16px;padding:20px 24px;border:1px solid rgba(27,54,93,.1);margin-top:16px}
+.quote b{display:block;font-size:9pt;letter-spacing:.2em;text-transform:uppercase;color:var(--goldsoft);margin-bottom:8px}
+.quote p{font-size:11pt;line-height:1.5;font-weight:500;color:#233555}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.tl .step{border-top:3px solid var(--gold);padding-top:12px}
+.tl .step small{display:block;font-size:8.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--goldsoft);font-weight:700;margin-bottom:6px}
+.tl .step h4{font-size:13pt;color:var(--navy);margin-bottom:6px}
+.tl .step p{font-size:10pt;line-height:1.45;color:#4a5a78;font-weight:500}
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin-top:16px}
+.qa div{border-left:3px solid var(--gold);padding-left:14px}
+.qa b{display:block;font-size:11pt;color:#fff;margin-bottom:4px;font-weight:700}
+.qa p{font-size:9.8pt;line-height:1.45;color:var(--mut);font-weight:500}
+.cta{display:inline-block;margin-top:22px;background:var(--gold);color:var(--ink);font-weight:800;font-size:12pt;padding:14px 28px;border-radius:40px;letter-spacing:.02em}
+.pill{display:inline-block;font-size:8.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--goldbr);border:1px solid rgba(212,175,55,.45);padding:5px 12px;border-radius:30px;margin-right:8px;margin-bottom:8px}
+.lt .pill{color:var(--navy);border-color:rgba(27,54,93,.3)}
+.price{display:flex;align-items:baseline;gap:14px;margin:10px 0 4px}
+.price b{font-size:54pt;font-weight:800;color:var(--goldbr);letter-spacing:-.03em;line-height:1}
+.price span{font-size:11pt;color:var(--mut);font-weight:600}
+table.cmp{width:100%;border-collapse:collapse;margin-top:18px;font-size:10.5pt}
+table.cmp th{text-align:left;padding:10px 14px;font-size:8.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--goldsoft);border-bottom:1px solid rgba(27,54,93,.2)}
+table.cmp td{padding:11px 14px;border-bottom:1px solid rgba(27,54,93,.1);color:#233555;font-weight:500;vertical-align:top}
+table.cmp td:first-child{font-weight:700;color:var(--navy)}
+
+@media screen{
+ html{background:#070d18}
+ body{max-width:1400px;margin:0 auto}
+ .slide{width:100%;height:auto;min-height:100vh;padding:110px 6vw 60px}
+ .bar{left:6vw;right:6vw;top:34px}
+ .foot{left:6vw;right:6vw;bottom:18px}
+ .disc{position:static;margin-top:22px}
+ .cta{cursor:default}
+ .dl{position:fixed;right:18px;bottom:18px;z-index:99;background:var(--gold);color:#0a1428;font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:12px 18px;border-radius:30px;text-decoration:none;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+}
+@media screen and (max-width:900px){
+ .g2,.g3,.g4,.split,.qa,.tl{grid-template-columns:1fr}
+ .stats{flex-wrap:wrap;gap:18px 28px}
+ h1{font-size:26pt}h2{font-size:21pt}.price b{font-size:38pt}
+ .bar img{height:.36in}.badge{display:none}
+ .card[style*="margin-top:38px"]{margin-top:0!important}
+ .slide{padding:96px 6vw 60px}
+}
+</style></head><body>
+
+<!-- 1 COVER -->
+<section class="slide dark"><div class="grid-bg"></div>
+<div class="bar"><img src="asset1.png" alt="Exelion Group"><span class="badge">Private Briefing</span></div>
+<div style="margin-top:.5in">
+<div class="eyebrow">E-Commerce Storefront Program</div>
+<h1>Own an Amazon storefront.<br><em>Operated for you</em> by a team that runs 500+.</h1>
+<p class="lead" style="margin-top:18px">Exelion Group connects investors with the right e-commerce channel and the right operator. For Amazon and Walmart storefronts, our preferred vendor is <b style="color:#fff">Stable Storefronts</b> — a New Jersey operator with its own warehouse, its own inventory, and 534 partner-owned stores.</p>
+<div class="stats">
+<div class="stat"><b>534</b><span>Partner stores operated</span></div>
+<div class="stat"><b>$40K</b><span>Two-store package</span></div>
+<div class="stat"><b>Hands-off</b><span>Stable operates it</span></div>
+<div class="stat"><b>You own it</b><span>Stores, accounts, inventory</span></div>
+</div></div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 2 HOW IT WORKS -->
+<section class="slide lt"><div class="grid-bg"></div>
+<div class="bar"><img src="asset0.png" alt="Exelion Group"><span class="badge">How It Works</span></div>
+<div class="eyebrow">Exelion + Stable Storefronts</div>
+<h2>We find the channel. <em>Stable runs the store.</em></h2>
+<p class="lead">E-commerce channels vary wildly — Amazon, Walmart, TikTok Shop, Shopify, eBay — and each one takes a different expertise. Exelion's job is to match investors who want into e-commerce with the channel that fits and the operator who has already proven it at scale.</p>
+<div class="grid g3">
+<div class="card"><div class="num">1</div><h4>Exelion Group</h4><p>Your point of contact. We qualify fit, explain the options, and introduce you to the operator. We work with several partners so the advice is channel-first, not vendor-first.</p></div>
+<div class="card feat"><div class="num">2</div><h4>Stable Storefronts — preferred vendor</h4><p>Exelion's preferred vendor for <b>Amazon, Walmart, and Rarely</b> storefronts. Stable builds, stocks, and operates the store you own. Stable does not do eBay, TikTok Shop, or Shopify — if that's your channel, we'll point you elsewhere.</p></div>
+<div class="card"><div class="num">3</div><h4>You — the owner</h4><p>You own the storefronts and the accounts. You fund the package and the inventory. Stable does the work; you review the numbers.</p></div>
+</div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 3 MEET STABLE -->
+<section class="slide navy"><div class="grid-bg"></div>
+<div class="bar"><img src="asset1.png" alt="Exelion Group"><span class="badge">The Operator</span></div>
+<div class="eyebrow">Meet Stable Storefronts</div>
+<h2>Operators with a warehouse, <em>not marketers with a course.</em></h2>
+<p class="lead">Stable Storefronts is a New Jersey e-commerce operator. They hold their own inventory, run their own fulfillment, and operate storefronts on behalf of hundreds of partner-owners. You can visit the warehouse and meet the team.</p>
+<div class="grid g4">
+<div class="card"><div class="bn">534</div><h4>Partner-owned stores</h4><p>Every partner came through a warm referral. Growth has been word of mouth, not ads.</p></div>
+<div class="card"><div class="bn">30,000</div><h4>Sq ft warehouse</h4><p>Physical New Jersey facility — receiving, storage, prep, and shipping under one roof.</p></div>
+<div class="card"><div class="bn">$4–5M</div><h4>Inventory on hand</h4><p>Product in the building at all times, so partner stores are stocked from real supply.</p></div>
+<div class="card"><div class="bn">~130</div><h4>Team members</h4><p>Sourcing, listings, compliance, account health, and fulfillment handled in-house.</p></div>
+</div>
+<div class="quote"><b>Channels Stable operates</b><p><span class="pill" style="color:#1B365D;border-color:rgba(27,54,93,.3)">Amazon</span><span class="pill" style="color:#1B365D;border-color:rgba(27,54,93,.3)">Walmart</span><span class="pill" style="color:#1B365D;border-color:rgba(27,54,93,.3)">Rarely (Stable's own platform)</span><br>Capacity to onboard up to 50 new stores a month.</p></div>
+<div class="foot"><span>Exelion Group · Stable Storefronts</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 4 THE PACKAGE -->
+<section class="slide lt"><div class="grid-bg"></div>
+<div class="bar"><img src="asset0.png" alt="Exelion Group"><span class="badge">The Offer</span></div>
+<div class="split">
+<div>
+<div class="eyebrow">The two-store package</div>
+<h2>Amazon <em>+</em> Rarely.<br>One package, two storefronts.</h2>
+<div class="price"><b style="color:var(--navy)">$40,000</b><span>one-time · you own both stores</span></div>
+<p class="lead">Two revenue channels, one operator. An Amazon storefront for reach, plus a store on <b>Rarely</b>, Stable's own platform, where Stable controls the supply and the marketplace directly.</p>
+<ul class="tick">
+<li><b>You own the storefronts and the seller accounts.</b> Stable operates them for you.</li>
+<li><b>Stable builds, stocks, and runs everything</b> — sourcing, listings, fulfillment, account health.</li>
+<li><b>Inventory is separate</b> and is the growth lever (next page).</li>
+<li><b>Hands-off for you.</b> Stable's team does the work; you review the numbers.</li>
+</ul>
+</div>
+<div>
+<div class="card" style="margin-top:38px"><h4 style="font-size:14pt">Why two stores instead of one</h4>
+<p style="margin-top:8px"><b>Amazon</b> is the largest marketplace in the world, and it comes with Amazon's rules. Account reviews and policy actions happen to good sellers. On its own, a single Amazon store is a single point of failure.</p>
+<p style="margin-top:10px"><b>Rarely</b> is the platform Stable owns and controls. It runs on Stable's inventory, so it isn't exposed to a third party's policy decisions. Pairing the two gives you diversification inside one package.</p>
+<p style="margin-top:10px;color:var(--navy);font-weight:700">This is the package Stable recommends and the one we present.</p><p style="margin-top:8px">Stable also operates <b>Walmart</b> storefronts — ask on your call.</p></div>
+</div></div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 5 INVENTORY -->
+<section class="slide dark"><div class="grid-bg"></div>
+<div class="bar"><img src="asset1.png" alt="Exelion Group"><span class="badge">Capital</span></div>
+<div class="eyebrow">Package + inventory</div>
+<h2>The package builds the store. <em>Inventory is the catalyst.</em></h2>
+<p class="lead">The $40,000 covers the build and operation of both storefronts. Inventory is funded separately and is what actually generates sales — the more product cycling through your stores, the faster the return.</p>
+<div class="grid g3">
+<div class="card"><div class="bn">$40K</div><h4>Package</h4><p>Amazon + Rarely storefronts, built and operated by Stable. One-time. Walmart available on request.</p></div>
+<div class="card feat"><div class="bn">~60 days</div><h4>Inventory cycle</h4><p>Inventory turns roughly every 60 days. Each turn is a chance to compound — a rental turns your money once a year; an inventory business turns it many times.</p></div>
+<div class="card"><div class="bn">You decide</div><h4>Inventory sizing</h4><p>Sized to your goals on the call. Partners who commit more to inventory reach payback faster; partners who keep inventory minimal should expect a longer runway.</p></div>
+</div>
+<div class="quote" style="margin-top:14px"><b>Plain language</b><p>Think of the $40,000 as the factory and inventory as the raw material. The factory doesn't produce without material. Your inventory budget is the single biggest variable in how quickly the stores pay you back — and it stays your capital, in product you own.</p></div>
+<div class="disc">Inventory requirements and recommended starting levels are reviewed individually with Stable. Figures are illustrative, not guarantees.</div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 6 WHAT TO EXPECT -->
+<section class="slide lt"><div class="grid-bg"></div>
+<div class="bar"><img src="asset0.png" alt="Exelion Group"><span class="badge">Expectations</span></div>
+<div class="eyebrow">What to expect — honestly</div>
+<h2>A real business, <em>on a real timeline.</em></h2>
+<p class="lead">Nobody here promises you a number. What we can tell you is how a store typically develops, based on how Stable's partner stores have behaved. Give it a quarter to build. Judge it over a year.</p>
+<div class="tl">
+<div class="step"><small>Months 1–3</small><h4>Build-out</h4><p>Entity, accounts, listings, first inventory. Expect little to no return in this window — the store is being built.</p></div>
+<div class="step"><small>Month 4+</small><h4>Ramp</h4><p>Stores are live and inventory is cycling. Sales climb toward run-rate; don't expect the full run-rate in month four either.</p></div>
+<div class="step"><small>Operational</small><h4>5–7% net monthly</h4><p>Once running, partners typically see around 5–7% net per month on the package, inventory-dependent.</p></div>
+<div class="step"><small>Year one</small><h4>20–25% target</h4><p>A conservative first-year target on the $40,000 package, not counting inventory upside. Heavier inventory can outperform; minimal inventory can take longer.</p></div>
+</div>
+<div class="quote"><b>The trade-off you should hear plainly</b><p>Partners who put real capital into inventory have done materially better than this. Partners who wouldn't go past a small inventory budget have taken up to three years to reach payback. The stores are the same — the inventory decision is what separates them.</p></div>
+<div class="disc">Targets, not guarantees. E-commerce carries risk, including loss of capital. Results depend on inventory levels, product mix, marketplace conditions, and time. Informational only; not an offer of securities.</div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 7 WHO THIS IS FOR -->
+<section class="slide navy"><div class="grid-bg"></div>
+<div class="bar"><img src="asset1.png" alt="Exelion Group"><span class="badge">Fit</span></div>
+<div class="split">
+<div>
+<div class="eyebrow">Who this is for</div>
+<h2>Built for owners, <em>not operators.</em></h2>
+<p class="lead">This is a managed asset for people who want to own an e-commerce business without running one. It is a good fit if:</p>
+<ul class="tick">
+<li>You have <b>$40,000 in liquid capital</b> for the package, plus an inventory budget — no financing.</li>
+<li>You can make a decision <b>within 30 days</b>. If the timing is off, we'll follow up when it's right.</li>
+<li>You want a <b>hands-off asset</b> run by a team with a physical operation you can visit.</li>
+<li>You think in <b>years, not weeks</b> — and you'd rather hear a conservative number than a flashy one.</li>
+</ul>
+</div>
+<div>
+<div class="card" style="margin-top:38px"><h4 style="font-size:14pt">Probably not a fit if…</h4>
+<ul class="tick" style="margin-top:8px">
+<li>You need the capital back inside 90 days.</li>
+<li>You want to run the day-to-day yourself.</li>
+<li>You're looking for eBay, TikTok Shop, or Shopify — Stable doesn't operate those channels.</li>
+<li>You're looking for a guarantee. There isn't one, and we won't pretend otherwise.</li>
+</ul></div>
+</div></div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 8 THE PROCESS -->
+<section class="slide lt"><div class="grid-bg"></div>
+<div class="bar"><img src="asset0.png" alt="Exelion Group"><span class="badge">The Process</span></div>
+<div class="eyebrow">What happens next</div>
+<h2>Two conversations. <em>No pressure on either.</em></h2>
+<p class="lead">You're going to talk to the operator and to a partner who already owns stores — not to a salesperson. Take the time you need between the two.</p>
+<div class="grid g3">
+<div class="card"><div class="num">1</div><h4>Strategy call — with Stable's CEO</h4><p>A 30-minute conversation directly with Daniel Hunt, CEO of Stable Storefronts. He walks the 30,000-foot view of how the stores work, answers your questions, and you both decide whether it's worth a second conversation.</p></div>
+<div class="card feat"><div class="num">2</div><h4>Validation call — with a current partner</h4><p>Meet a Stable partner who has owned stores through the program and made money in it. Ask him anything. This is where you hear how it actually went, from someone who did it.</p></div>
+<div class="card"><div class="num">3</div><h4>Onboard</h4><p>Agreement, entity and accounts, inventory plan, build begins. From here, Stable's team runs the operation and you review the numbers.</p></div>
+</div>
+<div class="quote"><b>Before your call</b><p>Come with your questions and a rough sense of your inventory budget. There's nothing to prepare beyond that — the point of the first call is to see if this fits, and it's fine if the answer is no.</p></div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 9 FAQ -->
+<section class="slide dark"><div class="grid-bg"></div>
+<div class="bar"><img src="asset1.png" alt="Exelion Group"><span class="badge">Straight Answers</span></div>
+<div class="eyebrow">The questions everyone asks</div>
+<h2>We'd rather you ask now <em>than wonder later.</em></h2>
+<div class="qa">
+<div><b>Do I actually own the stores?</b><p>Yes. The storefronts, the seller accounts, and the inventory are yours. Stable operates them on your behalf.</p></div>
+<div><b>How much of my time does this take?</b><p>Very little. Stable's team handles sourcing, listings, fulfillment, and account health; you review the numbers and stay informed on your stores.</p></div>
+<div><b>What does the $40,000 cover, and what doesn't it?</b><p>It covers building and operating both storefronts. Inventory is separate and is your capital — in product you own. Any ongoing fees are walked through line by line on your call before you sign anything.</p></div>
+<div><b>What if Amazon suspends the account?</b><p>It happens to legitimate sellers, which is exactly why the package includes a Rarely store on Stable's own platform. Stable's team handles Amazon account health and compliance day to day.</p></div>
+<div><b>Who is Exelion, and who is Stable?</b><p>Exelion Group is your introduction and point of contact; we work with several e-commerce partners. Stable Storefronts is our preferred vendor for Amazon, Walmart, and Rarely — the operator that actually runs your stores.</p></div>
+<div><b>Can I talk to someone who's done this?</b><p>Yes — it's built into the process. Your second conversation is with a current Stable partner who owns stores in the program.</p></div>
+<div><b>What returns should I expect?</b><p>Plan on a 90-day build, then roughly 5–7% net monthly once operational, and a conservative 20–25% first-year target on the package. Inventory drives the upside. Nothing is guaranteed.</p></div>
+<div><b>What exactly am I signing?</b><p>An agreement with Stable Storefronts for the build and operation of storefronts you own. Stable walks the full agreement and structure with you on your call, and you're encouraged to have your attorney review it. This material is informational only.</p></div>
+</div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential</span></div>
+</section>
+
+<!-- 10 CTA -->
+<section class="slide navy"><div class="grid-bg"></div>
+<div class="bar"><img src="asset1.png" alt="Exelion Group"><span class="badge">Next Step</span></div>
+<div style="margin-top:.4in">
+<div class="eyebrow">Let's see if it fits</div>
+<h1 style="font-size:36pt">Thirty minutes with the operator.<br><em>Then you decide.</em></h1>
+<p class="lead" style="margin-top:18px">Your strategy call is directly with Stable's CEO. You'll hear how the stores work, what they cost, what to realistically expect, and what could go wrong. If it fits, you'll meet a current partner next. If it doesn't, we'll tell you.</p>
+<div class="cta">Confirm your strategy call</div>
+<p style="margin-top:14px;font-size:9.5pt;color:var(--mut);font-weight:600;letter-spacing:.04em">30 minutes · Zoom · your Exelion contact will send the calendar confirmation</p>
+<div style="margin-top:.45in;font-size:9pt;letter-spacing:.2em;text-transform:uppercase;color:var(--goldsoft);font-weight:700">Exelion Group LLC · Preferred vendor: Stable Storefronts</div>
+</div>
+<div class="disc">Informational only. Not an offer to sell or a solicitation of an offer to buy securities. E-commerce carries risk, including loss of capital. All figures are targets based on operator experience, reviewed individually on your call, and are not guarantees.</div>
+<div class="foot"><span>Exelion Group · E-Commerce Storefront Program</span><span class="conf">Confidential — Prepared for prospective partners</span></div>
+</section>
+<a class="dl" href="Exelion-Stable-Storefronts-Program-Deck.pdf" download>Download PDF</a>
+</body></html>
